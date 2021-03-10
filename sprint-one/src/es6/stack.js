@@ -11,10 +11,12 @@ class Stack {
     }
     return size;
   }
+
   push (value) {
     var size = this.size();
     this.storage[size] = value;
   }
+
   pop () {
     var size = this.size();
     var poppedValue = this.storage[size - 1];

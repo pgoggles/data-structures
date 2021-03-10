@@ -4,6 +4,7 @@ class Queue {
   constructor() {
     this.storage = {};
   }
+
   size () {
     var size = 0;
     for (var key in this.storage) {
@@ -11,10 +12,12 @@ class Queue {
     }
     return size;
   }
+
   enqueue (value) {
     var size = this.size();
     this.storage[size] = value;
   }
+
   dequeue () {
     var size = this.size();
     var dequeuedValue = this.storage[0];

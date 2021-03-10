@@ -10,10 +10,12 @@ Stack.prototype.size = function () {
   }
   return size;
 };
+
 Stack.prototype.push = function (value) {
   var size = this.size();
   this.storage[size] = value;
 };
+
 Stack.prototype.pop = function () {
   var size = this.size();
   var poppedValue = this.storage[size - 1];

@@ -6,6 +6,7 @@ var Stack = function() {
 };
 
 var stackMethods = {};
+
 stackMethods.size = function () {
   var size = 0;
   for (var key in this.storage) {
@@ -13,18 +14,15 @@ stackMethods.size = function () {
   }
   return size;
 };
+
 stackMethods.push = function (value) {
   var size = this.size();
   this.storage[size] = value;
 };
+
 stackMethods.pop = function () {
   var size = this.size();
   var poppedValue = this.storage[size - 1];
   delete this.storage[size - 1];
   return poppedValue;
 };
-
-
-
-// think about what var stakc will return
-// think about what it's extending, not stack itself, but what inside of stack

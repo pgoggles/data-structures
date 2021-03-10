@@ -1,6 +1,7 @@
 var Stack = function() {
   var someInstance = {};
   var storage = {};
+
   someInstance.push = function(value) {
     var size = someInstance.size();
     storage[size] = value;
@@ -20,6 +21,7 @@ var Stack = function() {
     }
     return size;
   };
+
   return someInstance;
 };
 
